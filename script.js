@@ -24,6 +24,11 @@ if (menuButton && navigation) {
 const year = document.querySelector("#current-year");
 if (year) year.textContent = new Date().getFullYear();
 
+const profilePhoto = document.querySelector("#profile-photo");
+if (profilePhoto) {
+  profilePhoto.addEventListener("error", () => profilePhoto.remove());
+}
+
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 const contactSetupNote = document.querySelector("#contact-setup-note");
